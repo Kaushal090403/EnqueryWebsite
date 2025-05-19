@@ -1,0 +1,32 @@
+{% load static %}
+<html>
+<head>
+    <title>Enquery app</title>
+    <style>
+        /* CSS styles can be added here */
+        * {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            font-size: 30px;
+            background-color: rgb(243, 130, 234);
+            color: black;
+        }
+        /* Additional styles can be added as needed */
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Enquery Application</h1>
+        <form method="post">
+            {% csrf_token %}
+            <table>
+                {{fm}}
+            </table>
+        <br>
+        <input type="submit" value="Save" style="background-color: aliceblue;">
+    </form>
+    {{msg}}
+</center>
+
+</body>
+</html>
